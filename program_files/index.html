@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Best Price Store | Item Search</title>
+</head>
+
+<body>
+    <header><img src="images/best_store_logo.svg" alt="Best Store Logo" height="80px"></header>
+
+    <div id="header">
+        <div id="header-tools">
+            <div id="search_box">
+                <span id="search_icon"><img src="images/search-outline.svg" height="20px"></span>
+                <input type="text" id="search_bar" placeholder="Search by item ID or name" autocomplete="off">
+            </div>
+            <button type="button" class="new-item-btn">New Item</button>
+        </div>
+        <div id="feedback-bar" class="fade hide">
+            <p>Item successfully deleted</p>
+        </div>
+        
+    </div>
+
+    <div id="item_list">
+        <div class="item_row header">
+            <div class="item_field iId">ID</div>
+            <div class="item_field iName">Name</div>
+            <div class="item_field iDescription">Description</div>
+            <div class="item_field iSprice">Store Price</div>
+            <div class="spacer"></div>
+        </div>
+        <div id="item_container">
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" style="display: none;"></div>
+
+    <div id="deleteModal" class="modal" style="display: none;">
+        <div class="deleteText">
+            <h2>Are you sure you want to delete this item?</h2>
+            <p>This will permanently remove this item.</p>
+        </div>
+        <div class="modal-buttons">
+            <button class="delete-cancel-btn">Cancel</button>
+            <button class="delete-confirm-btn">Delete</button>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal" style="display: none;">
+        <h2>Edit Item</h2>
+        <form id="editForm">
+            <div class="editFormField">
+                <label for="editName">Item Name</label>
+                <input type="text" id="editName" name="name" autocomplete="off" required>
+            </div>
+
+            <div class="editFormField">
+                <label for="editDescription">Description</label>
+                <textarea id="editDescription" name="description" autocomplete="off" required></textarea>
+            </div>
+
+            <div class="editFormField">
+                <label for="editPrice">Store Price</label>
+                <div id="input-container">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="editPrice" name="price" autocomplete="off" required>
+                </div>
+            </div>
+
+        </form>
+        <div class="modal-buttons">
+            <button type="button" class="edit-cancel-btn">Cancel</button>
+            <button type="submit" class="save-btn">Save</button>
+        </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+
+</html>
