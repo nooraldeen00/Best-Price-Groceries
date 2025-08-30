@@ -30,7 +30,7 @@ This project showcases skills in front-end UI development, server-side scripting
 # ▶️ How to Use the Project
 1- Start a web server (e.g., Apache or XAMPP) and include all project files.
 
-2- Access the project in your browser via the server (e.g., http://localhost/Best-Price-Groceries).
+2- Access the project in your browser via the server.
 
 3- Use the interface:
 
